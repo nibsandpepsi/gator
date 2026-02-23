@@ -11,11 +11,11 @@ type state struct{
 
 type command struct{
 	Name string
-	args []string
+	Args []string
 }
 
 func handlerLogin(s *state, cmd command) error{
-	if len(cmd.args) <1 {
+	if len(cmd.Args) <1 {
 		return fmt.Errorf("the login handler expects a single argument, the username.")
 	}
 	return nil
